@@ -4,7 +4,7 @@ on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
-    container: ghcr.io/qmk/qmk_cli
+    container: qmkfm/qmk_cli
     strategy:
       fail-fast: false
       matrix:
@@ -21,7 +21,7 @@ jobs:
     - name: Checkout QMK
       uses: actions/checkout@v6
       with:
-        repository: qmk/qmk_firmware
+        repository: vial-kb/vial-qmk
         submodules: recursive
 
     - name: Checkout userspace
