@@ -55,8 +55,6 @@ jobs:
         path: |
           ./qmk_firmware/*.hex
           ./qmk_firmware/*.bin
-          *.hex
-          *.bin
 
     - name: Upload compiled firmware (tagged release)
       uses: softprops/action-gh-release@v2
@@ -65,5 +63,3 @@ jobs:
         files: |
           ./qmk_firmware/*.hex
           ./qmk_firmware/*.bin
-          *.hex
-          *.bin
